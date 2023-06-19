@@ -1,5 +1,5 @@
 import { MdMail, MdOutlineLocationOn } from "react-icons/md";
-import BestProject from "../../Components/BestProject";
+// import BestProject from "../../Components/BestProject";
 import SkillProgress from "../../Components/SkillProgress";
 import Marquee from "react-fast-marquee";
 

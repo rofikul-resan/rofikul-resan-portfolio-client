@@ -8,7 +8,7 @@ const MainLayout = () => {
       <div className="min-h-full rounded-2xl shadow-inner shadow-white/40 overflow-hidden w-full flex relative  ">
         <SideBar />
         <div className=" flex-1 h-full overflow-y-auto main-body ">
-          <div className="pr-14 pb-8">
+          <div className="pr-14 pb-8 h-full">
             <Outlet />
           </div>
         </div>
