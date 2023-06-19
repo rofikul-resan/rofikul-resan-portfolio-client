@@ -1,7 +1,7 @@
 const SkillProgress = ({ value, name }) => {
   return (
-    <div className="flex gap-3 items-center">
-      <h3 className="text-xl font-bold">{name}</h3>
+    <div className="flex gap-3 items-center mr-6">
+      <h3 className="text-xl font-bold w-40">{name}</h3>
       <progress
         className="progress progress-warning border border-black h-3"
         value={`${value}`}
