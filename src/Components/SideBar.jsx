@@ -3,7 +3,7 @@ import { Divide as Hamburger } from "hamburger-react";
 import { useState } from "react";
 import { AiOutlineHome, AiOutlineProject } from "react-icons/ai";
 import { RxAvatar } from "react-icons/rx";
-import { MdOutlineContactMail } from "react-icons/md";
+import { MdLibraryAdd, MdOutlineContactMail } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 
 const SideBar = () => {
@@ -22,7 +22,7 @@ const SideBar = () => {
         <img
           alt="Rofikul Islam Resan"
           src="/resan.png"
-          className="mt-20 w-11/12 mx-auto rounded-full  "
+          className="mt-14 w-11/12 mx-auto rounded-full  "
         />
         <h1
           className={`${
@@ -87,6 +87,19 @@ const SideBar = () => {
                   <MdOutlineContactMail className="text-2xl " />
                   <span className={`${isOpen ? "block" : "hidden"}`}>
                     contact
+                  </span>
+                </li>
+              </NavLink>
+            </Tooltip>
+            <Tooltip title="Add project" arrow>
+              <NavLink
+                to={"/add-project"}
+                className={({ isActive }) => (isActive ? "active" : "")}
+              >
+                <li className="btn btn-ghost justify-start gap-2">
+                  <MdLibraryAdd className="text-2xl " />
+                  <span className={`${isOpen ? "block" : "hidden"}`}>
+                    Add Project
                   </span>
                 </li>
               </NavLink>
