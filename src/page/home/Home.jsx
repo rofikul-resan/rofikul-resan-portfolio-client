@@ -11,10 +11,10 @@ const Home = () => {
             alt="resan"
             className="rounded-full mx-auto h-72"
           />
-          <div className=" mt-6 text-3xl ">
+          <div className=" mt-6 md:text-3xl text-xl ">
             <h1 className="font-semibold">Hi, I am Rofikul Islam Resan</h1>
 
-            <h1 className="font-semibold ">
+            <div className="font-semibold ">
               <TypeAnimation
                 sequence={[
                   " I am MERN Stack web Developer....",
@@ -27,7 +27,7 @@ const Home = () => {
                 cursor={true}
                 repeat={Infinity}
               />
-            </h1>
+            </div>
           </div>
         </div>
       </div>

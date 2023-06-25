@@ -7,11 +7,11 @@ const ContactForm = () => {
   };
   return (
     <div>
-      <div className="grid grid-cols-2 place-items-center pt-12">
+      <div className="grid md:grid-cols-2 place-items-center pt-12">
         <div>
           <h1 className="text-center text-3xl font-bold">contact</h1>
           <div className="space-y-3 text-center">
-            <p className="w-10/12 mx-auto text-center my-6">
+            <p className="md:w-10/12 mx-auto text-justify md:text-center px-6 my-6">
               {" "}
               I am Rofikul Islam Resan. I am From Bangladesh.I am a MERN stack
               Developer. Programming is not only my job it is my passion. Thanks
@@ -37,7 +37,7 @@ const ContactForm = () => {
 
         {/* form section  */}
         <div className="w-full">
-          <div className="rounded-md shadow-lg shadow-black/50 ">
+          <div className="rounded-md shadow-lg shadow-black/50 bg-black/25 mx-6 mt-6">
             <form onSubmit={handleSubmitMessage} className="p-10 space-y-5">
               <div className="form-control">
                 <label

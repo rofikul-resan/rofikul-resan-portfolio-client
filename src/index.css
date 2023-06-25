@@ -24,3 +24,20 @@
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none;
 }
+
+.react-tabs__tab-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.react-tabs__tab--selected {
+  @apply btn btn-warning btn-sm;
+}
+
+.project-card :hover .project-card-overlay {
+  height: 100%;
+  transition: all 0.5s;
+}

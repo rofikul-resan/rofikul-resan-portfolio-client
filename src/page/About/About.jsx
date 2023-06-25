@@ -5,15 +5,15 @@ import Marquee from "react-fast-marquee";
 
 const About = () => {
   return (
-    <div className="mt-6 ml-10">
-      <div className="flex items-center gap-6 ">
+    <div className="mt-6 md:ml-10">
+      <div className="md:flex items-center gap-6 ">
         <img
           src="/aboutImg.png"
           alt="resan"
           className="rounded-full w-60 h-60 "
         />
         <div>
-          <h1 className="text-4xl font-bold text-white uppercase">
+          <h1 className="md:text-4xl text-2xl font-bold text-white uppercase">
             Rofikul Islam Resan
           </h1>
           <h3 className="text-xl font-semibold">MERN Stack Developer</h3>
@@ -28,7 +28,7 @@ const About = () => {
       </div>
       <div className="mt-6">
         <h2 className="text-2xl font-bold underline mb-2 ">Objective</h2>
-        <p className="w-2/3  font-light text-justify">
+        <p className="md:w-2/3  font-light text-justify">
           Dedicated MERN Stack developer with a passion for hard work and a
           genuine love for what I do. Proficient in JavaScript and experience in
           REACT with a understanding of backend concepts. Seeking a challenging
@@ -57,7 +57,7 @@ const About = () => {
       </div> */}
       <div className="mt-6 mb-4">
         <h2 className="text-2xl font-bold underline mb-2 ">Skills</h2>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid md:grid-cols-2 gap-4">
           <SkillProgress value={90} name={"HTML"} />
           <SkillProgress value={80} name={"CSS"} />
           <SkillProgress value={75} name={"React JS"} />

@@ -5,6 +5,7 @@ import { AiOutlineHome, AiOutlineProject } from "react-icons/ai";
 import { RxAvatar } from "react-icons/rx";
 import { MdLibraryAdd, MdOutlineContactMail } from "react-icons/md";
 import { NavLink } from "react-router-dom";
+import ContactInfo from "./ContactInfo";
 
 const SideBar = () => {
   const [isOpen, setOpen] = useState(true);
@@ -12,8 +13,8 @@ const SideBar = () => {
   return (
     <div
       className={`${
-        isOpen ? "w-60" : "w-16"
-      } relative duration-300 bg-black/30 h-full overflow-hidden`}
+        isOpen ? "md:w-60" : "w-16"
+      } relative duration-300 bg-black/30 h-full overflow-auto`}
     >
       <div className="absolute right-1">
         <Hamburger toggled={isOpen} toggle={setOpen} size={30} />
@@ -105,6 +106,9 @@ const SideBar = () => {
               </NavLink>
             </Tooltip>
           </ul>
+          <div className="w-fit mx-auto md:hidden">
+            <ContactInfo />
+          </div>
         </div>
       </div>
     </div>

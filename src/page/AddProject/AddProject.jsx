@@ -2,9 +2,11 @@ import axios from "axios";
 import { useState } from "react";
 import Select from "react-select";
 import Swal from "sweetalert2";
+import CreatableSelect from "react-select/creatable";
 
 const AddProject = () => {
   const [technology, setTechnology] = useState([]);
+  const [feature, setFeature] = useState([]);
   const options = [
     { value: "html", label: "HTML" },
     { value: "css-formwork", label: "Css-formwork" },
@@ -19,24 +21,50 @@ const AddProject = () => {
     event.preventDefault();
     const form = event.target;
     const name = form.name.value;
-    const image = form.image.value;
+    const imageFile = form.image.files[0];
     const client = form.client.value;
     const server = form.server.value;
     const live = form.live.value;
+    const projectType = form.projectType.value;
+    const featureLIst = feature.map((feature) => feature.value);
     const technologyList = technology.map((tec) => tec.value);
-    const projectInfo = { name, image, client, server, live, technologyList };
-    console.log(projectInfo);
-    const res = await axios.post(
-      "http://localhost:5000/add-project",
-      projectInfo
-    );
-    if (res.data.insertedId) {
-      form.reset();
-      Swal.fire({
-        icon: "success",
-        title: "Project add successfully",
-      });
-    }
+    console.log(imageFile);
+    const formData = new FormData();
+    formData.append("image", imageFile);
+    axios
+      .post(
+        `https://api.imgbb.com/1/upload?key=${import.meta.env.VITE_IMG_API}`,
+        formData
+      )
+      .then(async (res) => {
+        const image = res.data.data.display_url;
+        if (!image) {
+          return;
+        }
+        const projectInfo = {
+          name,
+          image: image,
+          client,
+          server,
+          live,
+          technologyList,
+          featureLIst,
+          projectType,
+        };
+        console.log(projectInfo);
+        const response = await axios.post(
+          "http://localhost:5000/add-project",
+          projectInfo
+        );
+        if (response.data.insertedId) {
+          form.reset();
+          Swal.fire({
+            icon: "success",
+            title: "Project add successfully",
+          });
+        }
+      })
+      .catch((err) => console.log(err));
   };
   return (
     <form
@@ -71,9 +99,25 @@ const AddProject = () => {
       </div>
       <div className="form-control w-full ">
         <label className="label">
+          <span className="italic font-semibold">Project Feature</span>
+        </label>
+        <CreatableSelect
+          required
+          isMulti
+          options={feature}
+          onChange={setFeature}
+          className="text-black"
+        />
+      </div>
+      <div className="form-control w-full ">
+        <label className="label">
           <span className="italic font-semibold">Project Type</span>
         </label>
-        <select className="input input-bordered text-black">
+        <select
+          required
+          name="projectType"
+          className="input input-bordered text-black"
+        >
           <option value="normal">Normal</option>
           <option value="best">Best</option>
         </select>
@@ -83,10 +127,10 @@ const AddProject = () => {
           <span className="italic font-semibold">Project Thumbnail Link</span>
         </label>
         <input
-          type="text"
+          type="file"
           name="image"
           placeholder="Type here"
-          className="input input-bordered w-full text-black"
+          className="file-input file-input-bordered file-input-info w-full text-black"
           required
         />
       </div>
