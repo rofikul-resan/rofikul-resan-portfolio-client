@@ -1,18 +1,21 @@
+import axios from "axios";
 import { useState } from "react";
 import Select from "react-select";
+import Swal from "sweetalert2";
 
 const AddProject = () => {
   const [technology, setTechnology] = useState([]);
   const options = [
     { value: "html", label: "HTML" },
     { value: "css-formwork", label: "Css-formwork" },
+    { value: "javaScript", label: "javaScript" },
     { value: "react", label: "react Js" },
     { value: "node", label: "node" },
     { value: "mern", label: "Mern" },
     { value: "nextJs", label: "next js" },
   ];
 
-  const handelAddProject = (event) => {
+  const handelAddProject = async (event) => {
     event.preventDefault();
     const form = event.target;
     const name = form.name.value;
@@ -23,6 +26,17 @@ const AddProject = () => {
     const technologyList = technology.map((tec) => tec.value);
     const projectInfo = { name, image, client, server, live, technologyList };
     console.log(projectInfo);
+    const res = await axios.post(
+      "http://localhost:5000/add-project",
+      projectInfo
+    );
+    if (res.data.insertedId) {
+      form.reset();
+      Swal.fire({
+        icon: "success",
+        title: "Project add successfully",
+      });
+    }
   };
   return (
     <form
@@ -54,6 +68,15 @@ const AddProject = () => {
           className="uppercase text-black"
           required
         />
+      </div>
+      <div className="form-control w-full ">
+        <label className="label">
+          <span className="italic font-semibold">Project Type</span>
+        </label>
+        <select className="input input-bordered text-black">
+          <option value="normal">Normal</option>
+          <option value="best">Best</option>
+        </select>
       </div>
       <div className="form-control w-full ">
         <label className="label">
@@ -89,7 +112,6 @@ const AddProject = () => {
             name="server"
             placeholder="Server Link"
             className="input input-bordered w-full text-black"
-            required
           />
         </div>
         <div className="form-control w-full ">

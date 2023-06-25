@@ -4,6 +4,7 @@ import Home from "../page/home/Home";
 import About from "../page/About/About";
 import ContactForm from "../page/contact/ContactForm";
 import AddProject from "../page/AddProject/AddProject";
+import Project from "../page/Project/Project";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <ContactForm />,
+      },
+      {
+        path: "/project",
+        element: <Project />,
       },
       {
         path: "/add-project",
