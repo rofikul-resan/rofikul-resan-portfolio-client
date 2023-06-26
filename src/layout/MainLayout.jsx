@@ -9,7 +9,9 @@ const MainLayout = () => {
         <SideBar />
         <div className=" flex-1 h-full overflow-y-auto main-body ">
           <div className="md:pr-14 p-6 pb-8 h-full">
-            <Outlet />
+            <div className="pb-7">
+              <Outlet />
+            </div>
           </div>
         </div>
         <div className="absolute bottom-10 right-5 hidden md:block ">

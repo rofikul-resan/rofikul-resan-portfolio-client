@@ -92,19 +92,21 @@ const SideBar = () => {
                 </li>
               </NavLink>
             </Tooltip>
-            <Tooltip title="Add project" arrow>
-              <NavLink
-                to={"/add-project"}
-                className={({ isActive }) => (isActive ? "active" : "")}
-              >
-                <li className="btn btn-ghost justify-start gap-2">
-                  <MdLibraryAdd className="text-2xl " />
-                  <span className={`${isOpen ? "block" : "hidden"}`}>
-                    Add Project
-                  </span>
-                </li>
-              </NavLink>
-            </Tooltip>
+            <div className="hidden">
+              <Tooltip title="Add project" arrow>
+                <NavLink
+                  to={"/add-project"}
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                >
+                  <li className="btn btn-ghost justify-start gap-2">
+                    <MdLibraryAdd className="text-2xl " />
+                    <span className={`${isOpen ? "block" : "hidden"}`}>
+                      Add Project
+                    </span>
+                  </li>
+                </NavLink>
+              </Tooltip>
+            </div>
           </ul>
           <div className="w-fit mx-auto md:hidden">
             <ContactInfo />

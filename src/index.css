@@ -8,12 +8,15 @@
 }
 
 .main-layout {
-  background: rgb(101, 101, 116);
+  /* background: rgb(101, 101, 116);
   background: radial-gradient(
     circle,
     rgb(67, 71, 126) 12%,
     rgb(84, 42, 94) 79%
-  );
+  ); */
+  background: #200122;
+  background: -webkit-linear-gradient(to right, #6f0000, #200122);
+  background: linear-gradient(to right, #6f0000, #200122);
 }
 
 .main-body::-webkit-scrollbar {
