@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <>
       <div className=" w-full">
-        <div className="grid grid-cols-2 justify-between ">
+        <div className="grid md:grid-cols-2 justify-between ">
           <div className=" mt-6 md:text-3xl text-xl  ">
             <h1 className="font-semibold">
               Hi, I am <br /> Rofikul Islam Resan

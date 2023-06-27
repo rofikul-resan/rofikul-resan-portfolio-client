@@ -8,7 +8,7 @@ import { NavLink } from "react-router-dom";
 import ContactInfo from "./ContactInfo";
 
 const SideBar = () => {
-  const [isOpen, setOpen] = useState(true);
+  const [isOpen, setOpen] = useState(false);
   console.log(isOpen);
   return (
     <div
@@ -16,7 +16,7 @@ const SideBar = () => {
         isOpen ? "md:w-60" : "w-16"
       } relative duration-300 bg-black/30 h-full overflow-auto`}
     >
-      <div className="absolute right-1">
+      <div className="absolute right-[6px]">
         <Hamburger toggled={isOpen} toggle={setOpen} size={30} />
       </div>
       <div>
