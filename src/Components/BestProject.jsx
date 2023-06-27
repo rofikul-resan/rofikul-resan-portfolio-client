@@ -8,7 +8,9 @@ import GitHubCalendar from "react-github-calendar";
 const BestProject = () => {
   const [best, setBest] = useState([]);
   useEffect(() => {
-    axios("http://localhost:5000/best").then((res) => setBest(res.data));
+    axios("https://rofikul-islam-protfolio-server.vercel.app/best").then(
+      (res) => setBest(res.data)
+    );
   }, []);
   return (
     <div>

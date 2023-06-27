@@ -53,7 +53,7 @@ const AddProject = () => {
         };
         console.log(projectInfo);
         const response = await axios.post(
-          "http://localhost:5000/add-project",
+          "https://rofikul-islam-protfolio-server.vercel.app/add-project",
           projectInfo
         );
         if (response.data.insertedId) {

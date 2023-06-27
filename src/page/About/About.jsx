@@ -1,7 +1,8 @@
 import { MdMail, MdOutlineLocationOn } from "react-icons/md";
-// import BestProject from "../../Components/BestProject";
+import BestProject from "../../Components/BestProject";
 import SkillProgress from "../../Components/SkillProgress";
 import Marquee from "react-fast-marquee";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -23,7 +24,12 @@ const About = () => {
           <p className="flex gap-3 mt-2">
             <MdOutlineLocationOn className="text-2xl" /> Pabna , Bangladesh.
           </p>
-          <button className="btn btn-success mt-4 btn-sm">Get Resume</button>
+          <Link
+            to="https://drive.google.com/uc?id=1hIpvsITuMNC1oxxhNOvSKxHVXbqp_JcP&export=download"
+            className="btn btn-primary mt-4 btn-sm"
+          >
+            Get Resume
+          </Link>
         </div>
       </div>
       <div className="mt-6">
@@ -52,9 +58,9 @@ const About = () => {
           </a>
         </p>
       </div>
-      {/* <div className="mt-6">
+      <div className="mt-6">
         <BestProject />
-      </div> */}
+      </div>
       <div className="mt-6 mb-4">
         <h2 className="text-2xl font-bold underline mb-2 ">Skills</h2>
         <div className="grid md:grid-cols-2 gap-4">

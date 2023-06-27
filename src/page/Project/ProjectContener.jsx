@@ -8,9 +8,11 @@ const ProjectContener = ({ tabName }) => {
   const [project, setProject] = useState([]);
   useEffect(() => {
     if (tabName === "all") {
-      setUrl(`http://localhost:5000/project`);
+      setUrl(`https://rofikul-islam-protfolio-server.vercel.app/project`);
     } else {
-      setUrl(`http://localhost:5000/project?filter=${tabName}`);
+      setUrl(
+        `https://rofikul-islam-protfolio-server.vercel.app/project?filter=${tabName}`
+      );
     }
   }, [tabName]);
   useEffect(() => {

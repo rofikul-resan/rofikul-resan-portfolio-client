@@ -33,30 +33,30 @@ const ProjectCard = ({ project }) => {
               href={project.client}
               rel="noreferrer"
               target={"_blank"}
-              className="flex items-center flex-col"
+              className="flex items-center flex-col "
             >
               <BsCodeSlash className="text-2xl text-orange-300" />
-              <p>Client</p>
+              <p className="text-sm">Client</p>
             </a>
             {project.server && (
               <a
                 href={project.server}
                 rel="noreferrer"
                 target={"_blank"}
-                className="flex items-center flex-col"
+                className="flex items-center flex-col "
               >
                 <BsCodeSlash className="text-2xl text-orange-300" />
-                <p>Server</p>
+                <p className="text-sm">Server</p>
               </a>
             )}
             <a
               href={project.live}
               rel="noreferrer"
               target={"_blank"}
-              className="flex items-center flex-col"
+              className="flex items-center flex-col "
             >
               <VscLiveShare className="text-2xl text-orange-300" />
-              <p>Live Site</p>
+              <p className="text-sm">Live Site</p>
             </a>
           </div>
         </div>
