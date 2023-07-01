@@ -26,7 +26,9 @@ const BestProject = () => {
         ))}
       </div>
       <div className="mt-6">
-        <h1 className="text-2xl font-semibold">MY Github Information</h1>
+        <h1 className="text-2xl font-semibold mb-6">
+          MY Github Commit Information
+        </h1>
         <GitHubCalendar username="rofikul-resan" />
       </div>
     </div>

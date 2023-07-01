@@ -22,7 +22,7 @@ const ProjectContener = ({ tabName }) => {
   }, [url]);
   console.log(tabName);
   return (
-    <div className="grid md:grid-cols-3 gap-6 mt-14">
+    <div className="grid md:grid-cols-3 gap-6 mt-6">
       {project.map((project, i) => (
         <ProjectCard key={i} project={project} />
       ))}

@@ -44,9 +44,7 @@ const SideBar = () => {
             <Tooltip title="Home" arrow>
               <NavLink
                 to={"/"}
-                className={({ isActive }) =>
-                  isActive ? "text-orange-500" : ""
-                }
+                className={({ isActive }) => (isActive ? "active-Nav" : "")}
               >
                 <li className="btn btn-ghost justify-start gap-2">
                   <AiOutlineHome className="text-2xl" />

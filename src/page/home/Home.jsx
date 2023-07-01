@@ -1,13 +1,14 @@
 import { TypeAnimation } from "react-type-animation";
 import BestProject from "../../Components/BestProject";
 import { Link } from "react-router-dom";
-
+import Aos from "aos";
+Aos.init();
 const Home = () => {
   return (
     <>
       <div className=" w-full">
         <div className="grid md:grid-cols-2 justify-between ">
-          <div className=" mt-6 md:text-3xl text-xl  ">
+          <div data-aos="zoom-in" className=" mt-6 md:text-3xl text-xl  ">
             <h1 className="font-semibold">
               Hi, I am <br /> Rofikul Islam Resan
             </h1>
@@ -26,8 +27,8 @@ const Home = () => {
               />
             </div>
             <p className="text-sm font-light text-justify mt-4">
-              Dedicated MERN Stack developer with a passion for hard work and a
-              genuine love for what I do. Proficient in JavaScript and
+              I am a Dedicated MERN Stack developer with a passion for hard work
+              and a genuine love for what I do. Proficient in JavaScript and
               experience in REACT with a understanding of backend concepts.
               Seeking a challenging role to contribute and grow with a company.
             </p>
@@ -39,6 +40,7 @@ const Home = () => {
             </Link>{" "}
           </div>
           <img
+            data-aos="zoom-out"
             src="/resan.png"
             alt="resan"
             className="rounded-full mx-auto h-72 "

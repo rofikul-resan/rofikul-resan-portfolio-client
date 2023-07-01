@@ -12,6 +12,9 @@
   background: -webkit-linear-gradient(to right, #4d007c, #200122);
   background: linear-gradient(to right, #4d007c, #200122);
 }
+.active li {
+  @apply text-orange-400;
+}
 
 * ::-webkit-scrollbar {
   display: none;
