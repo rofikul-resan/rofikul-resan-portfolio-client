@@ -1,16 +1,17 @@
-import { FaFacebookF, FaGithub, FaLinkedin, FaSkype } from "react-icons/fa";
+import { FiFacebook, FiGithub } from "react-icons/fi";
 import { BsWhatsapp } from "react-icons/bs";
+import { AiOutlineLinkedin, AiOutlineSkype } from "react-icons/ai";
 
 const ContactInfo = () => {
   return (
-    <div className="flex flex-col gap-5 text-2xl text-white">
+    <div className="flex flex-col space-y-3 text-2xl text-white">
       <button>
         <a
           href="https://github.com/rofikul-resan"
           rel="noreferrer"
           target={"_blank"}
         >
-          <FaGithub />
+          <FiGithub className="text-lg" />
         </a>
       </button>
 
@@ -20,7 +21,7 @@ const ContactInfo = () => {
           rel="noreferrer"
           target={"_blank"}
         >
-          <FaLinkedin />
+          <AiOutlineLinkedin className="text-lg" />
         </a>
       </button>
       <button>
@@ -29,12 +30,12 @@ const ContactInfo = () => {
           rel="noreferrer"
           target={"_blank"}
         >
-          <FaFacebookF />
+          <FiFacebook className="text-lg" />
         </a>
       </button>
       <button>
         <a href="tel://+8801642673809" rel="noreferrer" target={"_blank"}>
-          <BsWhatsapp />
+          <BsWhatsapp className="text-lg" />
         </a>
       </button>
       <button>
@@ -43,7 +44,7 @@ const ContactInfo = () => {
           rel="noreferrer"
           target={"_blank"}
         >
-          <FaSkype />
+          <AiOutlineSkype className="text-lg" />
         </a>
       </button>
     </div>

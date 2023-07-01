@@ -16,8 +16,8 @@ const SideBar = () => {
         isOpen ? "md:w-60" : "w-16"
       } relative duration-300 bg-black/30 h-full overflow-auto`}
     >
-      <div className="absolute right-[6px]">
-        <Hamburger toggled={isOpen} toggle={setOpen} size={30} />
+      <div className="absolute left-[10px]">
+        <Hamburger toggled={isOpen} toggle={setOpen} size={20} />
       </div>
       <div>
         <img
@@ -32,6 +32,13 @@ const SideBar = () => {
         >
           Rofikul Islam Resan
         </h1>
+        <h3
+          className={`${
+            !isOpen ? "hidden" : "block"
+          } text-lg font-light capitalize text-center mt-2`}
+        >
+          MERN Stack Developer
+        </h3>
         <div className="text-white mt-4">
           <ul className="flex flex-col">
             <Tooltip title="Home" arrow>
@@ -108,7 +115,7 @@ const SideBar = () => {
               </Tooltip>
             </div>
           </ul>
-          <div className="w-fit mx-auto md:hidden">
+          <div className="w-fit md:hidden ml-[17px]">
             <ContactInfo />
           </div>
         </div>
