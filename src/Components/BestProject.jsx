@@ -30,6 +30,13 @@ const BestProject = () => {
           MY Github Commit Information
         </h1>
         <GitHubCalendar username="rofikul-resan" />
+        <a href="https://github.com/rofikul-resan" className="mt-4 ">
+          <img
+            className="w-9/12 mt-4"
+            src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=rofikul-resan&theme=radical"
+            alt="Rofikul Resan's GitHub Contribution"
+          />
+        </a>
       </div>
     </div>
   );

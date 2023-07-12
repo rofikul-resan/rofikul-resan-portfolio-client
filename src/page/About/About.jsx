@@ -77,20 +77,32 @@ const About = () => {
         <Marquee className="rounded-md">
           <div className="flex gap-8 my-4">
             <div>
-              <img src="/visual-studio.svg" alt="" className="h-12 mx-auto" />
-              <p className="text-center">VsCode</p>
+              <img src="/atom.png" alt="" className="h-12 mx-auto" />
+              <p className="text-center">React JS</p>
             </div>
             <div>
-              <img src="/tailwindcss.svg" alt="" className="h-12 mx-auto" />
-              <p className="text-center">Tailwind</p>
+              <img src="/nextjs.svg" alt="" className="h-12 mx-auto" />
+              <p className="text-center">Next JS</p>
             </div>
             <div>
               <img src="/node-js.png" alt="" className="h-12 mx-auto" />
               <p className="text-center">node JS</p>
             </div>
             <div>
+              <img src="/express-js.svg" alt="" className="h-12 mx-auto" />
+              <p className="text-center">Express</p>
+            </div>
+            <div>
+              <img src="/mongodb.svg" alt="" className="h-12 mx-auto" />
+              <p className="text-center">Mongodb</p>
+            </div>
+            <div>
               <img src="/redux-50.png" alt="" className="h-12 mx-auto" />
               <p className="text-center">Redux</p>
+            </div>
+            <div>
+              <img src="/tailwindcss.svg" alt="" className="h-12 mx-auto" />
+              <p className="text-center">Tailwind</p>
             </div>
             <div>
               <img src="/html-5.png" alt="" className="h-12 mx-auto" />
@@ -109,21 +121,26 @@ const About = () => {
               <p className="text-center">CSS</p>
             </div>
             <div>
+              <img src="/visual-studio.svg" alt="" className="h-12 mx-auto" />
+              <p className="text-center">VsCode</p>
+            </div>
+            <div>
               <img src="/bootstrap.svg" alt="" className="h-12 mx-auto" />
               <p className="text-center">Bootstrap</p>
-            </div>
-            <div>
-              <img src="/express-js.svg" alt="" className="h-12 mx-auto" />
-              <p className="text-center">Express</p>
-            </div>
-            <div>
-              <img src="/mongodb.svg" alt="" className="h-12 mx-auto" />
-              <p className="text-center">Mongodb</p>
             </div>
             <div>
               <img src="/firebase.svg" alt="" className="h-12 mx-auto" />
               <p className="text-center">Firebase</p>
             </div>
+            <div>
+              <img
+                src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg"
+                alt=""
+                className="h-12 mx-auto mr-1"
+              />
+              <p className="text-center">Figma</p>
+            </div>
+            <br />
           </div>
         </Marquee>
       </div>

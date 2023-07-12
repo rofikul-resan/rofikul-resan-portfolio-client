@@ -9,8 +9,8 @@
 
 .main-layout {
   background: #200122;
-  background: -webkit-linear-gradient(to right, #4d007c, #200122);
-  background: linear-gradient(to right, #4d007c, #200122);
+  background: -webkit-linear-gradient(to right, #260838, #200122);
+  background: linear-gradient(to right, #25043a, #200122);
 }
 .active li {
   @apply text-orange-400;
