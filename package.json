@@ -10,13 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0",
-    "@mui/material": "^5.13.6",
+    "@nextui-org/react": "^2.2.9",
     "aos": "^2.3.4",
     "axios": "^1.4.0",
     "daisyui": "^2.51.6",
     "firebase": "^9.23.0",
+    "framer-motion": "^10.16.5",
     "hamburger-react": "^2.5.0",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",

@@ -16,8 +16,11 @@ const BestProject = () => {
     <div>
       <div className="flex justify-between md:w-10/12 md:ml-12 mt-6">
         <h1 className="text-2xl font-semibold text-white"> Project</h1>
-        <Link to={"/project"} className="link link-hover">
-          +see more
+        <Link
+          to={"/project"}
+          className="link link-hover underline hover:text-violet-500"
+        >
+          see more +
         </Link>
       </div>
       <div className="grid md:grid-cols-3 gap-6 mt-6">

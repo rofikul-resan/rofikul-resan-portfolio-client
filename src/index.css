@@ -8,10 +8,17 @@
 }
 
 .main-layout {
-  background: #200122;
+  /* background: #200122;
   background: -webkit-linear-gradient(to right, #260838, #200122);
-  background: linear-gradient(to right, #25043a, #200122);
+  background: linear-gradient(to right, #25043a, #200122); */
+  background: #200122;
+  background: -webkit-linear-gradient(to right, #6f0000, #200122);
+  background: linear-gradient(to right, #6f0000, #200122);
+
+
+
 }
+
 .active li {
   @apply text-orange-400;
 }
@@ -21,7 +28,8 @@
 }
 
 * {
-  -ms-overflow-style: none; /* IE and Edge */
+  -ms-overflow-style: none;
+  /* IE and Edge */
   scrollbar-width: none;
 }
 

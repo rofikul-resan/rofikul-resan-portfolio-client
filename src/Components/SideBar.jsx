@@ -1,4 +1,3 @@
-import { Tooltip } from "@mui/material";
 import { Divide as Hamburger } from "hamburger-react";
 import { useState } from "react";
 import { AiOutlineHome, AiOutlineProject } from "react-icons/ai";
@@ -20,11 +19,15 @@ const SideBar = () => {
         <Hamburger toggled={isOpen} toggle={setOpen} size={20} />
       </div>
       <div>
-        <img
-          alt="Rofikul Islam Resan"
-          src="/resan.png"
-          className="mt-14 w-11/12 mx-auto rounded-full  "
-        />
+        <div className="mt-14">
+          <img
+            alt="Rofikul Islam Resan"
+            src="/resan.png"
+            className={`${
+              isOpen ? "block" : "hidden"
+            } w-11/12 mx-auto rounded-full  `}
+          />
+        </div>
         <h1
           className={`${
             !isOpen ? "hidden" : "block"
@@ -39,78 +42,60 @@ const SideBar = () => {
         >
           MERN Stack Developer
         </h3>
-        <div className="text-white mt-4">
+        <div className="text-white mt-4 w-fit mx-auto">
           <ul className="flex flex-col">
-            <Tooltip title="Home" arrow>
-              <NavLink
-                to={"/"}
-                className={({ isActive }) => (isActive ? "active-Nav" : "")}
-              >
-                <li className="btn btn-ghost justify-start gap-2">
-                  <AiOutlineHome className="text-2xl" />
-                  <span className={`${isOpen ? "block" : "hidden"}`}>Home</span>
-                </li>
-              </NavLink>
-            </Tooltip>
-            <Tooltip title="About" arrow>
-              <NavLink
-                to={"/about"}
-                className={({ isActive }) =>
-                  isActive ? "text-orange-500" : ""
-                }
-              >
-                <li className="btn btn-ghost justify-start gap-2">
-                  <RxAvatar className="text-2xl" />
-                  <span className={`${isOpen ? "block" : "hidden"}`}>
-                    About
-                  </span>
-                </li>
-              </NavLink>
-            </Tooltip>
-            <Tooltip title="project" arrow>
-              <NavLink
-                to={"/project"}
-                className={({ isActive }) =>
-                  isActive ? "text-orange-500" : ""
-                }
-              >
-                <li className="btn btn-ghost justify-start gap-2">
-                  <AiOutlineProject className="text-2xl" />
-                  <span className={`${isOpen ? "block" : "hidden"}`}>
-                    Project
-                  </span>
-                </li>
-              </NavLink>
-            </Tooltip>
-            <Tooltip title="contact" arrow>
-              <NavLink
-                to={"/contact"}
-                className={({ isActive }) =>
-                  isActive ? "text-orange-500" : ""
-                }
-              >
-                <li className="btn btn-ghost justify-start gap-2">
-                  <MdOutlineContactMail className="text-2xl " />
-                  <span className={`${isOpen ? "block" : "hidden"}`}>
-                    contact
-                  </span>
-                </li>
-              </NavLink>
-            </Tooltip>
+            <NavLink
+              to={"/"}
+              className={({ isActive }) => (isActive ? "active-Nav" : "")}
+            >
+              <li className="btn btn-ghost justify-start gap-2">
+                <AiOutlineHome className="text-2xl" />
+                <span className={`${isOpen ? "block" : "hidden"}`}>Home</span>
+              </li>
+            </NavLink>
+            <NavLink
+              to={"/about"}
+              className={({ isActive }) => (isActive ? "text-orange-500" : "")}
+            >
+              <li className="btn btn-ghost justify-start gap-2">
+                <RxAvatar className="text-2xl" />
+                <span className={`${isOpen ? "block" : "hidden"}`}>About</span>
+              </li>
+            </NavLink>
+            <NavLink
+              to={"/project"}
+              className={({ isActive }) => (isActive ? "text-orange-500" : "")}
+            >
+              <li className="btn btn-ghost justify-start gap-2">
+                <AiOutlineProject className="text-2xl" />
+                <span className={`${isOpen ? "block" : "hidden"}`}>
+                  Project
+                </span>
+              </li>
+            </NavLink>
+            <NavLink
+              to={"/contact"}
+              className={({ isActive }) => (isActive ? "text-orange-500" : "")}
+            >
+              <li className="btn btn-ghost justify-start gap-2">
+                <MdOutlineContactMail className="text-2xl " />
+                <span className={`${isOpen ? "block" : "hidden"}`}>
+                  contact
+                </span>
+              </li>
+            </NavLink>
             <div className="hidden">
-              <Tooltip title="Add project" arrow>
-                <NavLink
-                  to={"/add-project"}
-                  className={({ isActive }) => (isActive ? "active" : "")}
-                >
-                  <li className="btn btn-ghost justify-start gap-2">
-                    <MdLibraryAdd className="text-2xl " />
-                    <span className={`${isOpen ? "block" : "hidden"}`}>
-                      Add Project
-                    </span>
-                  </li>
-                </NavLink>
-              </Tooltip>
+              <NavLink
+                to={"/add-project"}
+                className={({ isActive }) => (isActive ? "active" : "")}
+              >
+                <li className="btn btn-ghost justify-start gap-2">
+                  <MdLibraryAdd className="text-2xl " />
+                  <span className={`${isOpen ? "block" : "hidden"}`}>
+                    Add Project
+                  </span>
+                </li>
+              </NavLink>
             </div>
           </ul>
           <div className="w-fit md:hidden ml-[17px]">

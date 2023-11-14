@@ -69,7 +69,7 @@ const AddProject = () => {
   return (
     <form
       onSubmit={handelAddProject}
-      className="md:w-9/12 p-6 mx-auto rounded-md shadow-md shadow-white/40 mt-10 bg-black/30"
+      className="md:w-9/12 p-6 mx-auto rounded-md shadow-md shadow-white/40 mt-10 bg-black/5"
     >
       <h1 className="text-2xl text-center font-bold">Add New Project</h1>
       <div className="form-control w-full ">
